@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+		<ol>
+	        <li class="crumb"><a href="./index.html">Home</a></li>
+	        <li class="crumb"><a href="./form.html">Profile</a></li>
+	    </ol>
+	</nav>
+    <form action="action_page.php">
+        <div class="rgcontainer">
+          <h1>Register</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+      
+          <label for="username"><b>username</b></label>
+          <input type="text" placeholder="Enter username" name="username" id="reglog" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+      
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+          <hr>
+      
+          <button type="submit" class="registerbtn">Register</button>
+        </div>
+      
+      </form>
+    <h1>Log In</h1>
+    <form action="action_page.php" method="post" id="login">
+       
+    
+        <div class="rgcontainer">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required id="logininput">
+      
+          <button id="ps" type="submit">Login</button>
+          
+        </div>
+      
+      </form>
+</body>
+</html>

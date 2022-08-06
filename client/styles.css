@@ -1,0 +1,116 @@
+body {
+    background-color:rgb(196, 114, 114);
+    /*background: url(https://assets.cntraveller.in/photos/62ac8a426494f32523f75083/16:9/w_1024%2Cc_limit/The%2520Canary.jpg) no-repeatcenter fixed;*/ 
+    background-size: cover;
+    height: 100%;
+  }
+  
+  h1{
+    color: rgb(24, 21, 43);
+  }
+  #business-containe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#login {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+#logininput[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+#ps {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+/* Add padding to containers */
+.rgcontainer {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+#reglog{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+ 
+  
