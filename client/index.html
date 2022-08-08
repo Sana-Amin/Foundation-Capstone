@@ -3,45 +3,49 @@
 <head>
 	<title>Homepage</title>
 	<link href="styles.css" rel="stylesheet">
+	
 
 </head>
 <body>
+	
+	
+<div id="home-links">
 	<nav>
-		<ol>
-	        <li class="crumb"><a href="./index.html">Home</a></li>
-	        <li class="crumb"><a href="./form.html">Profile</a></li>
-	    </ol>
+	        
+	        <button id="login-btn"><a href="./login.html">Login</a></button>
 	</nav>
+</div>
 
 	<content>
-		<h1>Lets Eat!</h1>
+		<h1 id="home-title">Lets Eat!</h1>
+		<div class="top"></div>
 		
-		
+		<div class="Home-header">
 		<form action="">
-			<label for=""> please enter your zip code: </label>
-			<input type="text" id="zip" placeholder = "Zip Code">
+			<h3 id="search-header">Where Should We Eat!</h3>
+			<label for="search-box" class="label-search"> Please enter a zip code: </label>
+			<input type="text" id="zip" class="search-box" placeholder = "Zip Code">
 			
-			<label for="food">Choose a category:</label>
+			<label for="food"class="label-search">Choose a category:</label>
 
-        <select id="category">
+        <select id="category" class="search-box">
            <option value="Chinese">Chinese</option>
            <option value="American">American</option>
            <option value="Indian">Indian</option>
            <option value="Mexican">Mexican</option>
 		   <option value="Italian">Italian</option>
         </select>
-		<label for="food">Choose a price:</label>
-		<select id="price">
+		<label for="food"class="label-search">Filter for price:</label>
+		<select id="price"class="search-box">
 			<option value="1">$</option>
 			<option value="2">$$</option>
 			<option value="3">$$$</option>
 			<option value="4">$$$$</option>
 		 </select>
-		<input type="submit" value="Submit ">
+		<input type="submit" value="Submit " class="submit">
 		</form>
+	    </div>
 		<section id="business-container"></section>
-
-		
 
 	</content>
 

@@ -17,4 +17,4 @@ app.get("/", (req,res) => res.sendFile(path.join(__dirname,"../client/index.html
 app.get("/api/search", getResturants)
 
 
-app.listen(4000, () => console.log("Server running on 4000"));
+app.listen(1508, () => console.log("Server running on 1508"));

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" and dir =Itr>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <title> Login Form</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+    <div id="home-links">
+        <nav>
+                
+                
+                <button id="login-btn"><a href="./login.html">Login</a></button>
+        </nav>
+    </div>
+    
+        <form class="box" onsubmit="LoginFunction()" method="get">
+            <h3 id="login-font">Login</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAGtL17v19ZHJqcxJHDOUJ2mmg_xm_jBH0zA&usqp=CAU" width="130x" alt="">
+            <input type="text" name="username" placeholder="Enter your username" id="username-login" autocomplete=true>
+            <input type="password" name="password" placeholder="Enter your password" id="password-login" autocomplete=false>
+            <input type="submit" value="Login" onclick="LoginFunction()" method="get">
+        </form>
+    <br>
+        
+       <form class="box" onsubmit="SignupFunction()" method="post">
+            <h3 id="login-font">Registration</h3>
+            <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAGtL17v19ZHJqcxJHDOUJ2mmg_xm_jBH0zA&usqp=CAU" width="130x" alt="">
+            <input type="text" name="username" placeholder="Create a username" id="username-rgs" autocomplete=true>
+            <input type="password" name="password" placeholder="Create a password" id="password-rgs" autocomplete=false>
+            <input type="submit" value="Signup" onclick="SignupFunction()">
+        </form>
+        
+
+    <script src="login.js"></script>
+    
+</body>
+
+</html>

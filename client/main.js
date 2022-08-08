@@ -17,13 +17,17 @@ const getResturants = (e) => {
     
     function resturantCard(businesses) {
         console.log(businesses)
+        //clears for every new search 
+        businessContainer.innerHTML= ''
         businesses.forEach((business)=>{
             const resturantCard = document.createElement('div')
             resturantCard.classList.add('business-card')
         
-            resturantCard.innerHTML = `<img alt='resturant cover' src=${business.image_url} class="resturant-cover"/>
+            resturantCard.innerHTML = `<div class="each-res">
+            <img alt='resturant cover' src=${business.image_url} class="resturant-cover"/>
             <p class="resturant-title">${business.name}</p>
-            <p class="resturant-rating">${business.rating}<p>     
+            <p class="resturant-rating">Rating: ${business.rating}<p> 
+            </div>    
             `
             businessContainer.appendChild(resturantCard)
         }

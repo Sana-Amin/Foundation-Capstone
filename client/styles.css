@@ -1,21 +1,131 @@
+/* Home Page Styling */
 body {
-    background-color:rgb(196, 114, 114);
-    /*background: url(https://assets.cntraveller.in/photos/62ac8a426494f32523f75083/16:9/w_1024%2Cc_limit/The%2520Canary.jpg) no-repeatcenter fixed;*/ 
+  
+    background-image: url("https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-11-23/41215b90-2d79-11eb-9dcd-8b2ef5358591.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    height: 100%;
+   
+  }
+  #home-links{
+    word-spacing: 100px; 
+    padding-left: 600px;
   }
   
-  h1{
-    color: rgb(24, 21, 43);
+  
+  
+  #home-title{
+    text-align: center;
+    color: #639898;
+    Font-size: 5.625rem;
+    margin:50px auto 0 auto;
+    font-family: 'Sacramento', cursive;
   }
-  #business-containe {
+  .search-box{
+    margin: auto;
+    width:100%;
+    height: 200%;
+    padding:10px;
+    box-sizing: border-box;
+    border-radius:4px;
+    border: .5px solid;
+    margin: 15px 0;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+
+  }
+  .top{
+    margin-top: 200x;
+  }
+  .label-search{
+    font-size: 20px;
+
+  }
+  .submit{
+    width:100%;
+    padding:10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border:none;
+    background-color: rgb(118, 203, 176);
+    font-size:20px;
+    cursor:pointer;
+
+  }
+
+  #search-header{
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .Home-header{
+    margin: auto;
+    background:rgb(79, 75, 105);
+    max-width: 500px;
+    padding: 10px;
+    border-radius:4px; 
+    color:rgb(220, 211, 199);
+    
+  }
+
+  #login-btn{
+  background-color: #04aa39;
+  border-radius: 5px;
+
+  margin: 8px 0;
+  border: black;
+  cursor: pointer;
+  
+  }
+  
+  a {
+    color: rgb(208, 195, 201);
+  }
+  
+ 
+
+  #business-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+
+.resturant-cover{
+  width: 350px; 
+  height: 300px;
+  border: 2px solid #3f3f32;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.each-res {
+background-color: rgb(220, 211, 199);
+width: 350px;
+margin: 20px; 
+display: flex;
+flex-direction: column;
+align-items: center;
+border-radius: 12px;
+border: 2px solid #3f3f32;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+}
+.resturant-title {
+font-size: 20px;
+margin: 5px 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.resturant-rating{
+font-size: 16px;
+margin: 5px 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 #login {
   border: 3px solid #f1f1f1;
+ 
 }
 
 /* Full-width inputs */
@@ -43,9 +153,6 @@ body {
 button:hover {
   opacity: 0.8;
 }
-
-
-
 
 
 /* Add padding to containers */

@@ -1,0 +1,130 @@
+body
+{
+    background-image: url("https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-11-23/41215b90-2d79-11eb-9dcd-8b2ef5358591.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+#login-font{
+    color:#F8E8D8;
+    font-size: 20px;
+    font-weight: 700;
+}
+#login-btn{
+    background-color: #04aa39;
+    border-radius: 5px;
+    margin: 8px 0;
+    border: black;
+    cursor: pointer;
+    
+    }
+
+#home-links{
+    word-spacing: 100px; 
+    padding-left: 600px;
+  }
+
+.box
+{
+        width: 300px;
+        height: 340px;
+        padding: 30px;
+        background:rgba(79, 75, 105);
+        text-align:center;
+        border-radius: 5%;
+        justify-content: center;
+        margin: auto;
+
+       
+}
+
+.box img {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    outline: none;
+    border-radius: 50%;
+    transition: 0.25px;
+}
+.box h3
+{
+    color:#F8E8D8;
+    font-size: 18px;
+    font-weight: 700;
+}
+.box input[type="text"],.box input[type="password"]
+{
+    border: 3px;
+    background:url(./sunset.jpg);
+    display:block;
+    margin:20px auto;
+    text-align:center;
+    padding: 14px;
+    width:220px;
+    font-size: 18px;
+    color:#F8E8D8;
+    border-radius:15px;
+    transition:0.25px;
+}
+.box input[type="text"]:focus,.box input[type="password"]:focus{
+    width: 270px;
+    border-color: #371BF2;
+}
+::placeholder{
+    color: F8E8D8;
+}
+.box input[type="submit"]
+{
+    border:0;
+    background:#d1b08f;
+    display: block;
+    margin:20px auto;
+    width:80px;
+    height:30px;
+    text-align: center;
+    font-size: 18px;
+    outline:none;
+    color:#455159;
+    border-radius: 5px;
+    transition:0.25px;
+    cursor:pointer;;
+}
+
+.box input[type="submit"]:hover{
+    background:#a05a7e;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: white;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: white;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: white;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+}
+            
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
+}
+
+::placeholder {
+    /* Most modern browsers support this now. */
+    color: white;
+}
