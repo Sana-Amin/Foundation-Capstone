@@ -8,12 +8,10 @@ body {
    
   }
   #home-links{
-    word-spacing: 100px; 
-    padding-left: 600px;
+    display: flex;
+    justify-content: center;
   }
-  
-  
-  
+
   #home-title{
     text-align: center;
     color: #639898;
@@ -48,7 +46,7 @@ body {
     margin: 10px 0;
     border-radius: 4px;
     border:none;
-    background-color: rgb(118, 203, 176);
+    background-color:#d1b08f;
     font-size:20px;
     cursor:pointer;
 
@@ -68,23 +66,7 @@ body {
     color:rgb(220, 211, 199);
     
   }
-
-  #login-btn{
-  background-color: #04aa39;
-  border-radius: 5px;
-
-  margin: 8px 0;
-  border: black;
-  cursor: pointer;
   
-  }
-  
-  a {
-    color: rgb(208, 195, 201);
-  }
-  
- 
-
   #business-container {
     display: flex;
     flex-wrap: wrap;
@@ -121,81 +103,22 @@ font-size: 16px;
 margin: 5px 0;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
-#login {
-  border: 3px solid #f1f1f1;
- 
+#logout-btn{
+  background-color:#d1b08f;
+  display: inline-block;      
+  text-align: center
 }
 
-/* Full-width inputs */
-#logininput[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-#ps {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
+a {
+	color: rgb(16, 15, 14);
+  text-decoration: none;
+  font-size: medium;
 }
 
 
-/* Add padding to containers */
-.rgcontainer {
-  padding: 16px;
-}
 
-/* Full-width input fields */
-#reglog{
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
 
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
 
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for the submit/register button */
-.registerbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.registerbtn:hover {
-  opacity:1;
-}
 
 
 
@@ -220,4 +143,4 @@ hr {
 
   
  
-  
+ 

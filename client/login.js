@@ -1,61 +1,84 @@
-//sign up function//
-function SignupFunction(e){
-    event.preventDefault();
-    
-    //get the username and passowrd values from the form
-    var username = document.getElementById('username-rgs').value;
-    var password = document.getElementById('password-rgs').value;
-    if(username != ""|| password !=""){
+document.addEventListener("DOMContentLoaded", () => {
+  const lgForm = document.querySelector("#login-form");
+  const createAccountForm = document.querySelector("#rgs-form");
 
-    
-    //pass the username and password values to the variable user
-    var user =
-        {
-            username: username,
-            password: password
-        }
-    //convert the user to string and store it in variable json then save it to the localStorage
-    var json = JSON.stringify(user);
-    console.log(json)
-    localStorage.setItem(username,json);
-    
-    //localStorage.setItem(username, json);
-    alert('You have successfully registered!');
-    }
-    else{
-        alert("Please enter valid username and password.")
-    }
+  document.querySelector("#linkSignIn").addEventListener("click", (e) => {
+    e.preventDefault();
+    lgForm.classList.remove("box--hidden");
+    createAccountForm.classList.add("box--hidden");
+  });
+  document
+    .querySelector("#linkCreateAccount")
+    .addEventListener("click", (e) => {
+      e.preventDefault();
+      lgForm.classList.add("box--hidden");
+      createAccountForm.classList.remove("box--hidden");
+    });
+});
+
+const loginForm = document.getElementById("login-form");
+const signUpForm = document.getElementById("rgs-form");
+
+function login(e) {
+  e.preventDefault();
+
+  let username = document.getElementById("username-login");
+  let password = document.getElementById("password-login");
+
+  let loggingIn = {
+    username: username.value,
+    password: password.value,
+  };
+  if (username.value == "" || password.value == "") {
+    //console.log("user not found!");
+    alert("Please enter a valid username or password.");
+  } else {
+    axios
+      .post("http://localhost:1508/api/login", loggingIn)
+      .then((res) => {
+        alert("Your In!");
+        console.log(res.data);
+        localStorage.setItem("user", JSON.stringify(res.data));
+        window.location.href = "./index.html";
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Please register/check your password.");
+      });
+  }
 }
 
-//login function//
-function LoginFunction(e){
-    event.preventDefault();
+function signUp(e) {
+  e.preventDefault();
 
-    var username = document.getElementById('username-login').value;
-    var password = document.getElementById('password-login').value;
-    //var result = document.getElementById('result').value;
+  let name = document.getElementById("name-rgs");
+  let username = document.getElementById("username-rgs");
+  let password = document.getElementById("password-rgs");
 
-    var user = localStorage.getItem(username);
-    var data = JSON.parse(user);
-    //console.log(data);
+  let newUser = {
+    name: name.value,
+    username: username.value,
+    password: password.value,
+  };
 
-    if (user == null)
-    {
-        //console.log("user not found!");
-        alert("user not found!");
-    }
+  if (
+    newUser.username == null ||
+    newUser.username == "" ||
+    newUser.password == null ||
+    newUser.password == "" ||
+    newUser.name == ""
+  ) {
+    alert("Please enter a valid username or password.");
+  } else {
+    alert("You've successfully registered!");
 
-    else if (username == data.username && password == data.password)
-    {
-        console.log('You are logged in');
-        alert('You are logged in');
-        window.location.replace("./index.html");
-    }
-
-
-    else
-    {
-        console.log('wrong password');
-        alert('wrong password');
-    }
+    axios.post("http://localhost:1508/api/signUp", newUser).then((res) => {
+      name.value = "";
+      username.value = "";
+      password.value = "";
+    });
+  }
 }
+
+loginForm.addEventListener("submit", login);
+signUpForm.addEventListener("submit", signUp);

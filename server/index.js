@@ -1,20 +1,31 @@
-const path = require('path')
+require("dotenv").config();
+
+const path = require("path");
 const express = require("express");
 const cors = require("cors");
 
 const app = express();
+const { SERVER_PORT } = process.env;
 
 app.use(cors());
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname,'../client')))
+const options = {
+  index: "login.html",
+};
+app.use(express.static(path.join(__dirname, "../client"), options));
 
-const{getResturants} = require('./controller')
+const { getResturants } = require("./controller");
+const { login, signUp } = require("./controller");
 
-app.get("/", (req,res) => res.sendFile(path.join(__dirname,"../client/index.html")))
+app.get("/", (req, res) =>
+  res.sendFile(path.join(__dirname, "../client/login.html"))
+);
 
-app.get("/api/search", getResturants)
+app.post("/api/login", login);
+app.post("/api/signUp", signUp);
 
+app.get("/api/search", getResturants);
 
-app.listen(1508, () => console.log("Server running on 1508"));
+app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`));

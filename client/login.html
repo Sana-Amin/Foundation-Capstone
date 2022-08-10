@@ -1,42 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" and dir =Itr>
+<html lang="en" and dir="Itr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width,initial-scale=1.0">
-    <title> Login Form</title>
-    <link rel="stylesheet" href="./login.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width,initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./login.css" />
 </head>
 
 <body>
-    <div id="home-links">
-        <nav>
-                
-                
-                <button id="login-btn"><a href="./login.html">Login</a></button>
-        </nav>
-    </div>
-    
-        <form class="box" onsubmit="LoginFunction()" method="get">
-            <h3 id="login-font">Login</h3>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAGtL17v19ZHJqcxJHDOUJ2mmg_xm_jBH0zA&usqp=CAU" width="130x" alt="">
-            <input type="text" name="username" placeholder="Enter your username" id="username-login" autocomplete=true>
-            <input type="password" name="password" placeholder="Enter your password" id="password-login" autocomplete=false>
-            <input type="submit" value="Login" onclick="LoginFunction()" method="get">
-        </form>
-    <br>
-        
-       <form class="box" onsubmit="SignupFunction()" method="post">
-            <h3 id="login-font">Registration</h3>
-            <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAGtL17v19ZHJqcxJHDOUJ2mmg_xm_jBH0zA&usqp=CAU" width="130x" alt="">
-            <input type="text" name="username" placeholder="Create a username" id="username-rgs" autocomplete=true>
-            <input type="password" name="password" placeholder="Create a password" id="password-rgs" autocomplete=false>
-            <input type="submit" value="Signup" onclick="SignupFunction()">
-        </form>
-        
+    <script>
+        window.localStorage.clear();
+    </script>
 
-    <script src="login.js"></script>
-    
+    <header>
+        <h1 id="sign-up">Please Login</h1>
+    </header>
+
+    <form class="box" id="login-form">
+        <h3 id="login-font">Login</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAGtL17v19ZHJqcxJHDOUJ2mmg_xm_jBH0zA&usqp=CAU"
+            width="130x" alt="" />
+        <input type="text" name="username" placeholder="Enter your username" id="username-login" autocomplete="true" />
+        <input type="password" name="password" placeholder="Enter your password" id="password-login"
+            autocomplete="false" />
+        <input type="submit" value="Login" id="login-submit" />
+        <p id="text-linkCreateAccount">
+            <a class="link" href="./" id="linkCreateAccount">Dont have an account? Create account</a>
+        </p>
+    </form>
+
+    <br />
+
+    <form class="box box--hidden" id="rgs-form">
+        <h3 id="login-font">Register</h3>
+        <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAGtL17v19ZHJqcxJHDOUJ2mmg_xm_jBH0zA&usqp=CAU"
+            width="130x" alt="" />
+        <input type="text" name="name" placeholder="Enter your name" id="name-rgs" autocomplete="false" />
+        <input type="text" name="username" placeholder="Create a username" id="username-rgs" autocomplete="false" />
+        <input type="password" name="password" placeholder="Create a password" id="password-rgs" autocomplete="false" />
+        <input type="submit" value="Signup" id="reg-submit" />
+        <p id="text-linkLogin">
+            <a class="link" href="./" id="linkSignIn">Already have an account? Sign in</a>
+        </p>
+    </form>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./login.js"></script>
 </body>
 
 </html>
