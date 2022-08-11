@@ -34,12 +34,12 @@ function login(e) {
     alert("Please enter a valid username or password.");
   } else {
     axios
-      .post("http://localhost:1508/api/login", loggingIn)
+      .post("/api/login", loggingIn)
       .then((res) => {
         alert("Your In!");
         console.log(res.data);
         localStorage.setItem("user", JSON.stringify(res.data));
-        window.location.href = "./index.html";
+        window.location.href = "/home";
       })
       .catch((error) => {
         console.log(error);
@@ -72,7 +72,7 @@ function signUp(e) {
   } else {
     alert("You've successfully registered!");
 
-    axios.post("http://localhost:1508/api/signUp", newUser).then((res) => {
+    axios.post("/api/signUp", newUser).then((res) => {
       name.value = "";
       username.value = "";
       password.value = "";

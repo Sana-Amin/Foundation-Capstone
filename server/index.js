@@ -5,7 +5,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const { SERVER_PORT } = process.env;
+const { PORT } = process.env;
 
 app.use(cors());
 
@@ -23,9 +23,13 @@ app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "../client/login.html"))
 );
 
+app.get("/home", (req, res) =>
+  res.sendFile(path.join(__dirname, "../client/index.html"))
+);
+
 app.post("/api/login", login);
 app.post("/api/signUp", signUp);
 
 app.get("/api/search", getResturants);
 
-app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`));
+app.listen(PORT, () => console.log(`up on ${PORT}`));
