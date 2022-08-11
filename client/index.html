@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Let's Eat</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
 
-<head>
-	<title>Let's Eat</title>
-	<link href="styles.css" rel="stylesheet" />
-</head>
+  <body>
+    <div id="home-links">
+      <nav>
+        <button id="logout-btn"><a href="./login.html">Logout</a></button>
+      </nav>
+    </div>
 
-<body>
-	<div id="home-links">
-		<nav>
-			<button id="logout-btn"><a href="./login.html">Logout</a></button>
-		</nav>
-	</div>
+    <content>
+      <h1 id="home-title">Lets Eat!</h1>
+      <div class="top"></div>
 
-	<content>
-		<h1 id="home-title">Lets Eat!</h1>
-		<div class="top"></div>
+      <div class="Home-header">
+        <form action="">
+          <h3 id="search-header">Where Should We Eat!</h3>
+          <label for="search-box" class="label-search">
+            Please enter a zip code:
+          </label>
+          <input
+            type="text"
+            id="zip"
+            class="search-box"
+            placeholder="Zip Code"
+          />
 
-		<div class="Home-header">
-			<form action="">
-				<h3 id="search-header">Where Should We Eat!</h3>
-				<label for="search-box" class="label-search">
-					Please enter a zip code:
-				</label>
-				<input type="text" id="zip" class="search-box" placeholder="Zip Code" />
+          <label for="food" class="label-search">Choose a category:</label>
 
-				<label for="food" class="label-search">Choose a category:</label>
+          <select id="category" class="search-box">
+            <option value="Chinese">Chinese</option>
+            <option value="American">American</option>
+            <option value="Indian">Indian</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Italian">Italian</option>
+          </select>
+          <label for="food" class="label-search">Filter for price:</label>
+          <select id="price" class="search-box">
+            <option value="1">$</option>
+            <option value="2">$$</option>
+            <option value="3">$$$</option>
+            <option value="4">$$$$</option>
+          </select>
+          <input type="submit" value="Submit " class="submit" />
+        </form>
+      </div>
+      <section id="business-container"></section>
+    </content>
 
-				<select id="category" class="search-box">
-					<option value="Chinese">Chinese</option>
-					<option value="American">American</option>
-					<option value="Indian">Indian</option>
-					<option value="Mexican">Mexican</option>
-					<option value="Italian">Italian</option>
-				</select>
-				<label for="food" class="label-search">Filter for price:</label>
-				<select id="price" class="search-box">
-					<option value="1">$</option>
-					<option value="2">$$</option>
-					<option value="3">$$$</option>
-					<option value="4">$$$$</option>
-				</select>
-				<input type="submit" value="Submit " class="submit" />
-			</form>
-		</div>
-		<section id="business-container"></section>
-	</content>
-
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script src="main.js"></script>
-</body>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>

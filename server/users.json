@@ -1,3 +1,9 @@
 [
-    
+    {
+        "id": 1,
+        "username": "sana123",
+        "name": "sana",
+        "password": "$2a$05$P.2vhO31QiYNJ/dYdoU6Fee7mOQL3UT.zGkVUWJvXJSKKEaLwwV6O"
+       
+    }
 ]
